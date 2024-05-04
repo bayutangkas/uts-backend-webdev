@@ -4,7 +4,8 @@ require_once __DIR__ . '/../Model/Purchases.php';
 class PurchasesController {
     private $purchaseModel;
 
-    public function __construct($pdo) {
+    public function __construct() {
+        require_once __DIR__ . '/../../config/database.php';
         $this->purchaseModel = new Purchases($pdo);
     }
 
